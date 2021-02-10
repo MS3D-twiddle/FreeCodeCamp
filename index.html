@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Survey Form 2</title>
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<h1 id="title">
+            FORM TITLE HERE
+        </h1>
+        <p id="description">
+			Please complete the form below
+		</p>
+		<span>
+			(This will greately help develope this site)
+		</span>
+	</header>
+	
+	<form id="survey-form">
+		<div class="form-elements" id="name-ip">
+            <label id="name-label" for="name">Full Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name" required>
+		</div>
+		
+		<div class="form-elements" id="email-ip">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+		</div>
+		
+		<div class="form-elements" id="age-ip">
+            <label id="number-label" for="age">Age</label>
+            <input type="number" name="age" id="number" min="16" max="100" class="form-control" placeholder="Enter your age" required>
+		</div>
+		
+		<div class="form-elements" id="role-ip">
+            <p>Which best describs your current role</p>
+            <select id="dropdown" name="job" class="form-control" required>
+				<option disabled selected value> Select current job</option>
+				<option value="student">Student</option>
+				<option value="job">Full time job</option>
+				<option value="learner">Full time learner</option>
+				<option value="preferNo">Prefer not to say</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+		
+		<div class="form-elements" id="recommend-ip">
+			<p>Would you recommend coding to a friend?</p>
+            <label>
+				<input name="recommended" value="definately" type="radio" class="input-radio" checked />
+		    &nbsp; Definately</label>
+			<label>
+				<input name="recommended" value="maybe" type="radio" class="input-radio" />
+		    &nbsp; Maybe</label>
+			<label>
+				<input name="recommended" value="not-sure" type="radio" class="input-radio" />
+		    &nbsp; Not sure </label>
+		</div>
+		
+		<div class="form-elements" id="improve-ip">
+			<p>What would you like to see improved?
+				<span class="clue">(Check all that apply)</span>
+			</p>
+			<label>
+				<input name="prefer" value="front-end-projects" type="checkbox" class="ip-checkbox"/>
+				Front end Projects
+			</label>
+			<label>
+				<input name="prefer" value="back-end-projects" type="checkbox" class="ip-checkbox"/>
+				Back end Projects
+			</label>
+			<label>
+				<input name="prefer" value="data-vis" type="checkbox" class="ip-checkbox"/>
+				Data visualization
+			</label>
+			<label>
+				<input name="prefer" value="open-source" type="checkbox" class="ip-checkbox"/>
+				Open source community
+			</label>
+			<label>
+				<input name="prefer" value="forum" type="checkbox" class="ip-checkbox"/>
+				Forum
+			</label>
+		</div>
+		
+		<div class="form-elements" id="comment-ip">
+			<p>Any comments or sugestions?</p>
+			<textarea id="comments" class="input-textarea" name="comment" placeholder="Enter comments here"></textarea>
+		</div>
+		
+		<div class="form-elements" id="btn">
+			<button type="submit" id="submit" class="submit-button">
+				Submit
+			</button>
+		</div>
+	</form>
+
+</body>
+	
+</html>

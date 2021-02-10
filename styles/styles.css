@@ -1,0 +1,176 @@
+/* CSS Document */
+
+@charset "UTF-8";
+
+/* Page background formatting */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: cadetblue;
+	background-image: linear-gradient(115deg, rgba(127,214,228,0.9), rgba(10,47,242,0.75)), url("../images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	color: #F6F6F6;
+	font-size: large;
+}
+
+
+/* Header section formatting */
+header {
+	padding-top: 3vh;
+	padding-bottom: 2vh;
+	text-align: center;
+}
+
+header p {
+	margin: 0;
+}
+
+span {
+	font-weight: 200;
+	font-size: small;
+}
+
+/* Form area formatting */
+form {
+	margin: 0 5vw;
+	display: grid;
+	grid-template-columns: 0.2fr 4fr 0.2fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1.3fr 1.8fr 1.8fr 90px;
+	grid-template-areas:
+		"left name right"
+		"left email right"
+		"left age right"
+		"left role right"
+		"left radio-sel right"
+		"left tick-sel right"
+		"left comments right"
+		"left sub-btn right";
+	background-color: rgba(0,18,168,0.7);
+	border-radius: 20px;
+}
+
+label {
+	display: flex;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.form-elements {
+	align-items: center;
+	font-size: 1rem;
+	
+}
+
+.form-elements {
+	padding: 1rem 0;
+	height: 4.5rem;
+}
+
+.form-elements #dropdown{
+	height: 2.4rem;
+	width: 100%;
+	color: #747575;
+}
+
+.form-elements p {
+	margin: 0.2rem 0 0.5rem 0;
+}
+
+.form-control {
+	display: flex;
+	height: 2rem;
+	width: 100%;
+	border-radius: 5px;
+	border-color: #0D0D88;
+	text-indent: 5px;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	border-radius: 5px;
+	border-color: #0D0D88;
+}
+
+span {
+	padding-left: 0.5rem;
+}
+
+.ip-checkbox {
+	margin-right: 15px;
+}
+
+.input-textarea {
+	height: 8rem;
+	width: 99%;
+	border-radius: 5px;
+	border-color: #0D0D88;
+	text-indent: 5px;
+}
+
+.submit-button {
+	width: 100%;
+	height: 3rem;
+	background-color: #88DEC8;
+}
+
+#name-ip {
+	grid-area: name;
+	
+}
+
+#email-ip {
+	grid-area: email;
+}
+
+#age-ip {
+	grid-area: age;
+}
+
+#role-ip {
+	grid-area: role;
+}
+
+#recommend-ip {
+	grid-area: radio-sel;
+}
+
+#improve-ip {
+	grid-area: tick-sel;
+}
+
+#comment-ip {
+	grid-area: comments;
+}
+
+#btn {
+	grid-area: sub-btn;
+}
+
+
+@media (max-width : 546px ){
+	form {
+	grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 2fr 1.8fr 85px;
+	}
+}
+
+@media (min-width : 818px ){
+	#survey-form {
+		width: 700px;
+		margin: auto;
+	}
+}
